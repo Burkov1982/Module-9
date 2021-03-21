@@ -1,6 +1,7 @@
 package Task_2;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -9,7 +10,8 @@ import com.google.gson.GsonBuilder;
 
 public class Main {
     public static void main(String[] args) {
-        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\java\\Task_2\\file.txt")) {
+        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\resources\\Task_2\\file.txt")) {
+            FileWriter writer = new FileWriter("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\java\\Task_2\\user.json");
             int c;
             String inputData = "";
             while ((c = reader.read()) > 0){
@@ -25,7 +27,8 @@ public class Main {
                 json[j] = gson.toJson(user);
                 j++;
             }
-            System.out.println(Arrays.toString(json));
+            writer.write(Arrays.toString(json));
+            writer.flush();
         }catch (IOException e){
             System.out.println(e.getMessage());
         }

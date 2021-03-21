@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module 9\\src\\Task_1\\file.txt")) {
+        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\resources\\Task_1\\file.txt")) {
             int c;
             String data = "";
 

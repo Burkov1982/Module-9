@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\java\\Task_3\\words.txt")){
+        try(FileReader reader = new FileReader("C:\\Users\\comp\\Desktop\\Module-9\\src\\main\\resources\\Task_3\\words.txt")){
             BufferedReader bufferedReader = new BufferedReader(reader);
             ArrayList<String> strings = new ArrayList<>();
             String temp = bufferedReader.readLine();
